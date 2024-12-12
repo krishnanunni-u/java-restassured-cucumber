@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.example.api.tests.PetApiTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.326 s <<< FAILURE! - in com.example.api.tests.PetApiTest
+com.example.api.tests.PetApiTest.testGetPetById  Time elapsed: 3.501 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at com.example.api.tests.PetApiTest.testGetPetById(PetApiTest.java:30)
+
+com.example.api.tests.PetApiTest.testDeletePet  Time elapsed: 1.559 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at com.example.api.tests.PetApiTest.testDeletePet(PetApiTest.java:55)
+
