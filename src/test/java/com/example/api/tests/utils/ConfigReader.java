@@ -1,4 +1,4 @@
-package com.example.api.client.utils;
+package com.example.api.tests.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
