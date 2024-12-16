@@ -1,4 +1,4 @@
-package com.example.api.client;
+package com.example.api.client.utils;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

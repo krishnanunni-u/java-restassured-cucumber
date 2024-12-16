@@ -1,7 +1,7 @@
 package com.example.api.tests;
 
 import com.aventstack.extentreports.ExtentTest;
-import com.example.api.client.ApiClient;
+import com.example.api.client.utils.ApiClient;
 import com.example.api.tests.model.PetRequest;
 import com.example.api.tests.model.Tag;
 import com.example.api.client.utils.ConfigReader;
