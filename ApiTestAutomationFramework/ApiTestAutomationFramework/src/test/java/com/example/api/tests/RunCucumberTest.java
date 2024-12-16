@@ -9,11 +9,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-<<<<<<< HEAD
         glue = {"com.example.api.tests", "com.example.api.tests.utils"},
-=======
-        glue = {"com.example.api.tests", "com.example.api.main.utils"},
->>>>>>> origin/master
         plugin = {"pretty", "json:target/cucumber.json"},
         monochrome = true
 )

@@ -2,11 +2,7 @@ package com.example.api.tests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-<<<<<<< HEAD
 import com.example.api.tests.utils.ExtentReportManager;
-=======
-import com.example.api.client.utils.ExtentReportManager;
->>>>>>> origin/master
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;

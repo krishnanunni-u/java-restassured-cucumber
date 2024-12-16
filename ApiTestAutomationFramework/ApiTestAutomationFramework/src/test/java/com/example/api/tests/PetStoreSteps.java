@@ -1,18 +1,10 @@
 package com.example.api.tests;
 
 import com.aventstack.extentreports.ExtentTest;
-<<<<<<< HEAD
 import com.example.api.client.ApiClient;
 import com.example.api.model.PetRequest;
 import com.example.api.tests.utils.ConfigReader;
 import com.example.api.tests.utils.ExtentReportManager;
-=======
-import com.example.api.client.utils.ApiClient;
-import com.example.api.tests.model.PetRequest;
-import com.example.api.tests.model.Tag;
-import com.example.api.client.utils.ConfigReader;
-import com.example.api.client.utils.ExtentReportManager;
->>>>>>> origin/master
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
 import org.junit.Assert;
@@ -34,11 +26,7 @@ public class PetStoreSteps {
         // Initialize ApiClient with the base URI from configuration
         this.apiClient = new ApiClient(ConfigReader.getProperty("base.uri"));
 
-<<<<<<< HEAD
         // Fetch the current ExtentTest instance for the running scenario
-=======
-        // Initialize ExtentTest instance for the current scenario
->>>>>>> origin/master
         this.test = ExtentReportManager.getTest();
 
         if (test != null) {
@@ -61,11 +49,7 @@ public class PetStoreSteps {
                 "string",                        // Default category name
                 name,                            // Pet name from the method parameter
                 List.of("string"),               // Default photo URLs
-<<<<<<< HEAD
                 List.of(PetRequest.Tag.builder() // Default tags
-=======
-                List.of(Tag.builder() // Default tags
->>>>>>> origin/master
                         .id(0L)
                         .name("string")
                         .build()),
@@ -75,10 +59,7 @@ public class PetStoreSteps {
         test.info("Prepared pet payload with name: " + name + " and status: " + status);
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     @Given("I prepare an invalid pet payload")
     public void prepareInvalidPetPayload() {
         requestBody = """
@@ -105,27 +86,16 @@ public class PetStoreSteps {
     public void sendGetRequestForPet(int petId) {
         String endpoint = ConfigReader.getProperty("pet.endpoint") + "/" + petId;
 
-<<<<<<< HEAD
         Map<String, String> headers = new HashMap<>(); // Initialize headers if needed
         headers.put("Content-Type", "application/json"); // Example header
 
         test.info("Sending GET request to: " + apiClient.getBaseUri() + endpoint);
         response = apiClient.get(endpoint, headers); // Pass headers into the GET method
-=======
-        Map<String, String> headers = new HashMap<>();
-        headers.put("Content-Type", "application/json");
-
-        test.info("Sending GET request to: " + apiClient.getBaseUri() + endpoint);
-        response = apiClient.get(endpoint, headers);
->>>>>>> origin/master
 
         test.info("Response received: " + response.prettyPrint());
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     @Then("the API should return status code {int}")
     public void verifyStatusCode(int expectedStatusCode) {
         try {
@@ -133,11 +103,7 @@ public class PetStoreSteps {
             test.pass("Verified that the status code is: " + expectedStatusCode);
         } catch (AssertionError e) {
             test.fail("Expected status code: " + expectedStatusCode + ", but got: " + response.statusCode());
-<<<<<<< HEAD
             throw e;
-=======
-            throw e; // Re-throw the error for failure handling
->>>>>>> origin/master
         }
     }
 
@@ -148,11 +114,7 @@ public class PetStoreSteps {
             test.pass("Verified that the response contains name: " + name);
         } catch (AssertionError e) {
             test.fail("Name validation failed: " + e.getMessage());
-<<<<<<< HEAD
             throw e;
-=======
-            throw e; // Re-throw the error for failure handling
->>>>>>> origin/master
         }
     }
 
@@ -163,11 +125,7 @@ public class PetStoreSteps {
             test.pass("Verified that the response contains status: " + status);
         } catch (AssertionError e) {
             test.fail("Status validation failed: " + e.getMessage());
-<<<<<<< HEAD
             throw e;
-=======
-            throw e; // Re-throw the error for failure handling
->>>>>>> origin/master
         }
     }
 
@@ -179,11 +137,7 @@ public class PetStoreSteps {
             test.pass("Verified that the response contains an error message: " + errorMessage);
         } catch (Exception e) {
             test.fail("Error message validation failed: " + e.getMessage());
-<<<<<<< HEAD
             throw e;
-=======
-            throw e; // Re-throw the error for failure handling
->>>>>>> origin/master
         }
     }
 
@@ -195,11 +149,7 @@ public class PetStoreSteps {
             test.pass("Verified the error message matches: " + expectedMessage);
         } catch (Exception e) {
             test.fail("Generic error message validation failed: " + e.getMessage());
-<<<<<<< HEAD
             throw e;
-=======
-            throw e; // Re-throw the error for failure handling
->>>>>>> origin/master
         }
     }
 }
